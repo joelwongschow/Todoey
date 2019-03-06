@@ -10,7 +10,7 @@ import UIKit
 
 class ToDoListViewController: UITableViewController {
 
-    let itemArray = ["Find Mike", "Buy Eggos", "Destroy Demogrogon"]
+    var itemArray = ["Find Mike", "Buy Eggos", "Destroy Demogrogon"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +30,6 @@ class ToDoListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(itemArray[indexPath.row])
         
-        
-        
         if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
             tableView.cellForRow(at: indexPath)?.accessoryType = .none
         } else {
@@ -39,6 +37,30 @@ class ToDoListViewController: UITableViewController {
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        let alert = UIAlertController(title: "Add New Todoey Item", message: "", preferredStyle: .alert)
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Create New Item"
+        }
+        
+        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+            self.itemArray.append((alert.textFields?[0].text)!)
+            self.addNewestItemToTableView()
+        }
+        
+        alert.addAction(action)
+    
+        present(alert, animated: true,completion: nil)
+    }
+    
+    func addNewestItemToTableView(){
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: itemArray.count - 1, section: 0)], with: .automatic)
+        tableView.endUpdates()
     }
     
 }
