@@ -12,7 +12,8 @@
 		DF1D7C35222E80E200BF92E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1D7C33222E80E200BF92E4 /* Main.storyboard */; };
 		DF1D7C37222E80E500BF92E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF1D7C36222E80E500BF92E4 /* Assets.xcassets */; };
 		DF1D7C3A222E80E500BF92E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1D7C38222E80E500BF92E4 /* LaunchScreen.storyboard */; };
-		DF1D7C422230C58100BF92E4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D7C412230C58100BF92E4 /* Item.swift */; };
+		DFF2E86D22374B75004AD014 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFF2E86B22374B75004AD014 /* DataModel.xcdatamodeld */; };
+		DFF2E890223866B1004AD014 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2E88F223866B1004AD014 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +24,8 @@
 		DF1D7C36222E80E500BF92E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF1D7C39222E80E500BF92E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF1D7C3B222E80E500BF92E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF1D7C412230C58100BF92E4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DFF2E86C22374B75004AD014 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		DFF2E88F223866B1004AD014 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +71,7 @@
 		DF1D7C432230C63B00BF92E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DF1D7C412230C58100BF92E4 /* Item.swift */,
+				DFF2E86B22374B75004AD014 /* DataModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -77,7 +79,7 @@
 		DF1D7C442230C64600BF92E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DF1D7C31222E80E200BF92E4 /* ToDoListViewController.swift */,
+				DF1D7C33222E80E200BF92E4 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -85,7 +87,8 @@
 		DF1D7C452230C65300BF92E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DF1D7C33222E80E200BF92E4 /* Main.storyboard */,
+				DFF2E88F223866B1004AD014 /* CategoryViewController.swift */,
+				DF1D7C31222E80E200BF92E4 /* ToDoListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,8 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF2E890223866B1004AD014 /* CategoryViewController.swift in Sources */,
 				DF1D7C32222E80E200BF92E4 /* ToDoListViewController.swift in Sources */,
-				DF1D7C422230C58100BF92E4 /* Item.swift in Sources */,
+				DFF2E86D22374B75004AD014 /* DataModel.xcdatamodeld in Sources */,
 				DF1D7C30222E80E200BF92E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +376,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DFF2E86B22374B75004AD014 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DFF2E86C22374B75004AD014 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = DFF2E86C22374B75004AD014 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DF1D7C24222E80E200BF92E4 /* Project object */;
 }
